@@ -1,2 +1,2 @@
 # PORTFOLIO
-[portfolio](https://progyu.github.io/PORTFOLIO/)
+[portfolio link](https://progyu.github.io/PORTFOLIO/)
