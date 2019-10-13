@@ -5,13 +5,22 @@
   font-weight: normal;
   font-style: normal; }
 
+
+@font-face { 
+  font-family: 'ON-IGothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eleven@1.0/ON-IGothic.woff') 
+  format('woff'); 
+  font-weight: normal;
+  font-style: normal; }
 /* =======================================================
 *
 * 	Template Style 
 *	Edit this section
 *
 * ======================================================= */
+
 body {
+  /* font-family: 'ON-IGothic'; */
   font-family: "Quicksand", Arial, sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -1458,3 +1467,72 @@ body.offcanvas {
 
 .js .animate-box {
   opacity: 0; }
+
+/* 프로젝트 모달 */
+.megabox-wrapper, .trello-wrapper {
+  padding: 3em;
+  position: relative;
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999;
+  background-color: #fff;
+  animation-name: open;
+  animation-duration: 1s;
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.megabox-close, .trello-close {
+  position: absolute;
+  top: 0;
+  right: 0.7em;
+  font-size: 5em;
+  text-decoration: none;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+.work-img {
+  width: 300px;
+  height: 200px;
+  cursor: pointer;
+  border: 1px solid #e6e6e6;
+}
+
+.work-wrapper {
+  display: flex;
+}
+
+.work-wrapper article {
+  width: 300px;
+  margin-right: 5em;
+}
+
+.font-wrapper h1, h2, h3, p {
+  font-family: 'ON-IGothic';
+}
+
+.font-wrapper h3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.font-wrapper article > p {
+  text-align: center;
+}

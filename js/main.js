@@ -306,5 +306,80 @@
 		owlCrouselFeatureSlide();
 	});
 
+	// 프로젝트 모달
+	const $body = document.querySelector('body');
 
+	// 메가박스
+	const $megaboxWrapper = document.querySelector('.megabox-wrapper');
+	const $megaboxDetail = document.querySelector('.megabox-detail');
+	const $megaboxClose = document.querySelector('.megabox-close');
+	
+	// 트렐로
+	const $trelloWrapper = document.querySelector('.trello-wrapper');
+	const $trelloDetail = document.querySelector('.trello-detail');
+	const $trelloClose = document.querySelector('.trello-close');
+
+	const fadeOutEffect = (dom) => {
+    const fadeEffect = setInterval(() => {
+        if (!dom.style.opacity) {
+					dom.style.opacity = 1;
+        }
+        if (dom.style.opacity > 0) {
+					dom.style.opacity -= 0.2;
+        } else {
+            clearInterval(fadeEffect);
+        }
+    }, 100);
+	}
+
+	const openModal = (dom) => {
+		dom.style.opacity = 1;
+		dom.style.display = 'block';
+		$body.style.overflow = 'hidden';
+	}
+
+	const removeModal = (dom) => {
+		setTimeout(() => {
+			dom.style.display = 'none';
+			$body.style.overflow = 'auto';
+		}, 1000);
+	}
+
+	// 이미지 확대 기능
+	const img = document.getElementsByTagName('img');
+	for (let x = 0; x < img.length; x++) {
+		img.item(x).onclick=function() {
+			if(this.alt === '프로규 블로그 이미지') return;
+		window.open(this.src)}; 
+  }
+	
+	// 메가박스
+
+	$megaboxDetail.onclick = (e) => {
+		e.preventDefault();
+		e.stopPropagation();
+		openModal($megaboxWrapper);
+	};
+	
+	$megaboxClose.onclick = (e) => {
+		e.preventDefault();
+		e.stopPropagation();
+		fadeOutEffect($megaboxWrapper);
+		removeModal($megaboxWrapper);
+	};
+
+	// 트렐로
+
+	$trelloDetail.onclick = (e) => {
+		e.preventDefault();
+		e.stopPropagation();
+		openModal($trelloWrapper);
+	};
+
+	$trelloClose.onclick = (e) => {
+		e.preventDefault();
+		e.stopPropagation();
+		fadeOutEffect($trelloWrapper);
+		removeModal($trelloWrapper);
+	};
 }());
