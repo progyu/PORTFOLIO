@@ -1469,7 +1469,8 @@ body.offcanvas {
   opacity: 0; }
 
 /* 프로젝트 모달 */
-.megabox-wrapper, .trello-wrapper {
+
+.project-wrapper {
   padding: 3em;
   position: relative;
   display: none;
@@ -1479,7 +1480,8 @@ body.offcanvas {
   left: 0;
   right: 0;
   z-index: 999999;
-  background-color: #fff;
+  background-color: #1f1910 ;
+  color: #e4e8ee ;
   animation-name: open;
   animation-duration: 1s;
 }
@@ -1494,17 +1496,21 @@ body.offcanvas {
   }
 }
 
-.megabox-close, .trello-close {
+.modal-close-btn {
   position: absolute;
   top: 0;
   right: 0.7em;
   font-size: 5em;
   text-decoration: none;
-  background-color: #fff;
+  background-color: #1f1910 ;
   border: none;
   outline: none;
   margin: 0;
   padding: 0;
+}
+
+.modal-close-btn :hover {
+  opacity: 0.5;
 }
 
 .work-img {
@@ -1523,16 +1529,34 @@ body.offcanvas {
   margin-right: 5em;
 }
 
-.font-wrapper h1, h2, h3, p {
+.project-wrapper h1 {
   font-family: 'ON-IGothic';
+  color: #e4e8ee;
 }
 
-.font-wrapper h3 {
+.project-wrapper h2 {
+  font-family: 'ON-IGothic';
+  color: #e4e8ee;
+  margin-bottom: 10px;
+}
+
+.project-wrapper h3 {
+  font-family: 'ON-IGothic';
+  color: #e4e8ee;
   margin-top: 15px;
   margin-bottom: 10px;
   text-align: center;
 }
 
-.font-wrapper article > p {
+.project-wrapper p {
+  font-family: 'ON-IGothic';
+  color: #e4e8ee;
+}
+
+.project-wrapper > .detail-work h2 {
+  margin-bottom: 20px;
+}
+
+.project-wrapper article > p {
   text-align: center;
 }
