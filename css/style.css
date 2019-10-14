@@ -1471,10 +1471,10 @@ body.offcanvas {
 /* 프로젝트 모달 */
 
 .project-wrapper {
-  padding: 3em;
-  position: relative;
-  display: none;
   position: fixed;
+  overflow: auto;
+  padding: 2em;
+  display: none;
   top: 0;
   bottom: 0;
   left: 0;
@@ -1482,8 +1482,6 @@ body.offcanvas {
   z-index: 999999;
   background-color: #1f1910 ;
   color: #e4e8ee ;
-  animation-name: open;
-  animation-duration: 1s;
 }
 
 @keyframes open {
@@ -1496,10 +1494,30 @@ body.offcanvas {
   }
 }
 
+@keyframes close {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeIn-effect {
+  animation-name: open;
+  animation-duration: 1s;
+}
+
+.fadeOut-effect {
+  animation-name: close;
+  animation-duration: 1s;
+}
+
 .modal-close-btn {
   position: absolute;
-  top: 0;
-  right: 0.7em;
+  top: -2px;
+  right: 35px;
   font-size: 5em;
   text-decoration: none;
   background-color: #1f1910 ;
@@ -1509,54 +1527,85 @@ body.offcanvas {
   padding: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .modal-close-btn {
+    top: 20px;
+    font-size: 3em; } }
+
 .modal-close-btn :hover {
   opacity: 0.5;
 }
 
 .work-img {
-  width: 300px;
+  width: 100%;
   height: 200px;
   cursor: pointer;
   border: 1px solid #e6e6e6;
 }
+@media screen and (max-width: 768px) {
+  .work-img {
+    width: 100%;
+    height: 300px; } }
 
 .work-wrapper {
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .work-wrapper {
+    display: block; } }
 
 .work-wrapper article {
   width: 300px;
-  margin-right: 5em;
+  margin-right: 85px;
+}
+@media screen and (max-width: 768px) {
+  .work-wrapper article {
+    width: 100%; } }
+
+
+.font-IGothic {
+  font-family: 'ON-IGothic';
 }
 
 .project-wrapper h1 {
-  font-family: 'ON-IGothic';
   color: #e4e8ee;
 }
+@media screen and (max-width: 768px) {
+  .project-wrapper h1 {
+    font-size: 30px; } }
 
 .project-wrapper h2 {
-  font-family: 'ON-IGothic';
+  font-size: 25px;
   color: #e4e8ee;
   margin-bottom: 10px;
 }
+@media screen and (max-width: 768px) {
+  .project-wrapper h2 {
+    font-size: 22px; } }
 
 .project-wrapper h3 {
-  font-family: 'ON-IGothic';
+  font-size: 20px;
   color: #e4e8ee;
   margin-top: 15px;
   margin-bottom: 10px;
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  .project-wrapper h3 {
+    font-size: 18px; } }
 
 .project-wrapper p {
-  font-family: 'ON-IGothic';
+  font-size: 15px;
   color: #e4e8ee;
 }
+@media screen and (max-width: 768px) {
+  .project-wrapper p {
+    font-size: 15px; } }
 
 .project-wrapper > .detail-work h2 {
   margin-bottom: 20px;
 }
 
-.project-wrapper article > p {
+/* .project-wrapper article > p {
   text-align: center;
-}
+} */

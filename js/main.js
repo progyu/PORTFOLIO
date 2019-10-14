@@ -309,6 +309,8 @@
 	// 프로젝트 모달
 	const $body = document.querySelector('body');
 
+	// const $projectWrapper = document.querySelector('.project-wrapper');
+
 	// 메가박스
 	const $megaboxWrapper = document.querySelector('.megabox-wrapper');
 	const $megaboxDetail = document.querySelector('.megabox-detail');
@@ -319,26 +321,18 @@
 	const $trelloDetail = document.querySelector('.trello-detail');
 	const $trelloClose = document.querySelector('.trello-close');
 
-	const fadeOutEffect = (dom) => {
-    const fadeEffect = setInterval(() => {
-        if (!dom.style.opacity) {
-					dom.style.opacity = 1;
-        }
-        if (dom.style.opacity > 0) {
-					dom.style.opacity -= 0.2;
-        } else {
-            clearInterval(fadeEffect);
-        }
-    }, 100);
-	}
-
+	// 프로젝트 모달 열기 및 fade-in 효과
 	const openModal = (dom) => {
-		dom.style.opacity = 1;
+		dom.classList.remove('fadeOut-effect');
+		dom.classList.add('fadeIn-effect');
 		dom.style.display = 'block';
 		$body.style.overflow = 'hidden';
 	}
 
+	// 프로젝트 모달 닫기 및 fade-out 효과
 	const removeModal = (dom) => {
+		dom.classList.remove('fadeIn-effect');
+		dom.classList.add('fadeOut-effect');
 		setTimeout(() => {
 			dom.style.display = 'none';
 			$body.style.overflow = 'auto';
@@ -354,7 +348,6 @@
   }
 	
 	// 메가박스
-
 	$megaboxDetail.onclick = (e) => {
 		e.preventDefault();
 		e.stopPropagation();
@@ -364,7 +357,6 @@
 	$megaboxClose.onclick = (e) => {
 		e.preventDefault();
 		e.stopPropagation();
-		fadeOutEffect($megaboxWrapper);
 		removeModal($megaboxWrapper);
 	};
 
@@ -379,7 +371,6 @@
 	$trelloClose.onclick = (e) => {
 		e.preventDefault();
 		e.stopPropagation();
-		fadeOutEffect($trelloWrapper);
 		removeModal($trelloWrapper);
 	};
 }());
