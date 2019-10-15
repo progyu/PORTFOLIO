@@ -1472,7 +1472,8 @@ body.offcanvas {
 
 .project-wrapper {
   position: fixed;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   padding: 2em;
   display: none;
   top: 0;
@@ -1514,38 +1515,33 @@ body.offcanvas {
   animation-duration: 1s;
 }
 
-.modal-close-btn {
-  position: absolute;
-  top: -2px;
-  right: 35px;
-  font-size: 5em;
-  text-decoration: none;
+.modal-close-btn  {
+  padding: 0;
+  margin: 0;
   background-color: #1f1910 ;
+  text-decoration: none;
   border: none;
   outline: none;
-  margin: 0;
-  padding: 0;
 }
 
-@media screen and (max-width: 768px) {
-  .modal-close-btn {
-    top: 20px;
-    font-size: 3em; } }
+.modal-close-btn > i  {
+  font-size: 50px;
+  position: absolute;
+  top: 23px;
+  right: 23px;
+}
 
 .modal-close-btn :hover {
   opacity: 0.5;
 }
 
-.work-img {
-  width: 100%;
-  height: 200px;
-  cursor: pointer;
-  border: 1px solid #e6e6e6;
+.two-wrapper {
+  display: flex;
 }
-@media screen and (max-width: 768px) {
-  .work-img {
+@media screen and (max-width: 1280px) {
+  .two-wrapper {
     width: 100%;
-    height: 300px; } }
+    display: block; } }
 
 .work-wrapper {
   display: flex;
@@ -1558,10 +1554,32 @@ body.offcanvas {
   width: 300px;
   margin-right: 85px;
 }
+@media screen and (max-width: 1280px) {
+  .work-wrapper article {
+    width: 100%;
+    height: 480px;
+  } }
 @media screen and (max-width: 768px) {
   .work-wrapper article {
-    width: 100%; } }
+    height: auto;
+  } }
 
+@media screen and (max-width: 1280px) {
+  .article-left {
+    padding-right: 20px;
+    margin-right: 0;
+  }
+}  
+
+.work-img {
+  width: 100%;
+  height: 200px;
+  cursor: pointer;
+  border: 1px solid #e6e6e6;
+}
+@media screen and (max-width: 1280px) {
+  .work-img {
+    height: 300px; } }
 
 .font-IGothic {
   font-family: 'ON-IGothic';
@@ -1605,7 +1623,3 @@ body.offcanvas {
 .project-wrapper > .detail-work h2 {
   margin-bottom: 20px;
 }
-
-/* .project-wrapper article > p {
-  text-align: center;
-} */
