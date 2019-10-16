@@ -306,35 +306,31 @@
 		owlCrouselFeatureSlide();
 	});
 
-	// 프로젝트 모달
-	const $body = document.querySelector('body');
-
-	// const $projectWrapper = document.querySelector('.project-wrapper');
-
-	// 메가박스
-	const $megaboxWrapper = document.querySelector('.megabox-wrapper');
-	const $megaboxDetail = document.querySelector('.megabox-detail');
-	const $megaboxClose = document.querySelector('.megabox-close');
 	
-	// 트렐로
-	const $trelloWrapper = document.querySelector('.trello-wrapper');
-	const $trelloDetail = document.querySelector('.trello-detail');
-	const $trelloClose = document.querySelector('.trello-close');
+	// 프로젝트 모달
+	const el = (selector) => document.querySelector(selector);
+	const elAll = (selector) => document.querySelectorAll(selector);
+	
+	const $body = el('body');
+	
+	const $projectDetailbutton = elAll('.project-detail-btn');
+	const $closeModalbutton = elAll('.modal-close-btn');
+	const $projectWrapper = elAll('.project-wrapper');
 
 	// 프로젝트 모달 열기 및 fade-in 효과
-	const openModal = (dom) => {
-		dom.classList.remove('fadeOut-effect');
-		dom.classList.add('fadeIn-effect');
-		dom.style.display = 'block';
+	const openModal = (div) => {
+		div.classList.remove('fadeOut-effect');
+		div.classList.add('fadeIn-effect');
+		div.style.display = 'block';
 		$body.style.overflow = 'hidden';
 	}
 
 	// 프로젝트 모달 닫기 및 fade-out 효과
-	const removeModal = (dom) => {
-		dom.classList.remove('fadeIn-effect');
-		dom.classList.add('fadeOut-effect');
+	const closeModal = (div) => {
+		div.classList.remove('fadeIn-effect');
+		div.classList.add('fadeOut-effect');
 		setTimeout(() => {
-			dom.style.display = 'none';
+			div.style.display = 'none';
 			$body.style.overflow = 'auto';
 		}, 1000);
 	}
@@ -347,30 +343,19 @@
 		window.open(this.src)}; 
   }
 	
-	// 메가박스
-	$megaboxDetail.onclick = (e) => {
-		e.preventDefault();
-		e.stopPropagation();
-		openModal($megaboxWrapper);
-	};
-	
-	$megaboxClose.onclick = (e) => {
-		e.preventDefault();
-		e.stopPropagation();
-		removeModal($megaboxWrapper);
-	};
+	// 모달 열기
+	$projectDetailbutton.forEach((button, index) => {
+		button.onclick = (e) => {
+			e.preventDefault();
+			openModal($projectWrapper[index]);
+		}
+	});
 
-	// 트렐로
-
-	$trelloDetail.onclick = (e) => {
-		e.preventDefault();
-		e.stopPropagation();
-		openModal($trelloWrapper);
-	};
-
-	$trelloClose.onclick = (e) => {
-		e.preventDefault();
-		e.stopPropagation();
-		removeModal($trelloWrapper);
-	};
+	// 모달 닫기
+	$closeModalbutton.forEach((button, index) => {
+		button.onclick = (e) => {
+			e.preventDefault();
+			closeModal($projectWrapper[index]);
+		}
+	});
 }());

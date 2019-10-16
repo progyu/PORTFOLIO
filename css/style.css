@@ -1535,11 +1535,11 @@ body.offcanvas {
   opacity: 0.5;
 }
 
-.two-wrapper {
+.two-work-wrapper {
   display: flex;
 }
 @media screen and (max-width: 1280px) {
-  .two-wrapper {
+  .two-work-wrapper {
     width: 100%;
     display: block; } }
 
