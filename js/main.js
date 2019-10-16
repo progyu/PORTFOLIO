@@ -309,19 +309,19 @@
 	
 	// 프로젝트 모달
 	const el = (selector) => document.querySelector(selector);
-	const elAll = (selector) => document.querySelectorAll(selector);
+	const elList = (selector) => document.querySelectorAll(selector);
 	
 	const $body = el('body');
 	
-	const $projectDetailbutton = elAll('.project-detail-btn');
-	const $closeModalbutton = elAll('.modal-close-btn');
-	const $projectWrapper = elAll('.project-wrapper');
+	const $projectDetailbuttons = elList('.project-detail-btn');
+	const $closeModalbuttons = elList('.modal-close-btn');
+	const $projectWrappers = elList('.project-wrapper');
 
 	// 프로젝트 모달 열기 및 fade-in 효과
 	const openModal = (div) => {
 		div.classList.remove('fadeOut-effect');
 		div.classList.add('fadeIn-effect');
-		div.style.display = 'block';
+		div.removeAttribute('hidden');
 		$body.style.overflow = 'hidden';
 	}
 
@@ -329,10 +329,10 @@
 	const closeModal = (div) => {
 		div.classList.remove('fadeIn-effect');
 		div.classList.add('fadeOut-effect');
+		$body.style.overflow = 'auto';
 		setTimeout(() => {
-			div.style.display = 'none';
-			$body.style.overflow = 'auto';
-		}, 1000);
+			div.setAttribute('hidden',true);
+		}, 200);
 	}
 
 	// 이미지 확대 기능
@@ -344,18 +344,18 @@
   }
 	
 	// 모달 열기
-	$projectDetailbutton.forEach((button, index) => {
+	$projectDetailbuttons.forEach((button, index) => {
 		button.onclick = (e) => {
 			e.preventDefault();
-			openModal($projectWrapper[index]);
+			openModal($projectWrappers[index]);
 		}
 	});
 
 	// 모달 닫기
-	$closeModalbutton.forEach((button, index) => {
+	$closeModalbuttons.forEach((button, index) => {
 		button.onclick = (e) => {
 			e.preventDefault();
-			closeModal($projectWrapper[index]);
+			closeModal($projectWrappers[index]);
 		}
 	});
 }());
