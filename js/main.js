@@ -339,7 +339,7 @@
 	const img = document.getElementsByTagName('img');
 	for (let x = 0; x < img.length; x++) {
 		img.item(x).onclick=function() {
-			if(this.alt === '프로규 블로그 이미지') return;
+			if(this.alt === '프로규 블로그 이미지' || 'GitHub 커밋 이미지' || '페이스북 게시글 이미지') return;
 		window.open(this.src)}; 
   };
 	
