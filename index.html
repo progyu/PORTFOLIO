@@ -374,7 +374,7 @@
 								<div class="project" style="background-image: url(images/megabox-main.png);">
 									<div class="desc">
 										<div class="con">
-											<h3><a href="work.html">megabox clone 프로젝트(2019.07)</a></h3>
+											<h3><a href="work.html">megabox clone 프로젝트(2019.08)</a></h3>
 											<span>
 												패스트 캠퍼스에서 진행한 파이널 프로젝트에서 백엔드 개발자들과 협업하여 
 												영화 예매 사이트인 메가박스 클론코딩을 진행하였습니다. Angular 프레임워크에서 기본적으로 제공하는
@@ -394,8 +394,14 @@
 								<div class="project" style="background-image: url(images/trello-main.png);">
 									<div class="desc">
 										<div class="con">
-											<h3><a href="work.html">trello clone 프로젝트(2019.07)</a></h3>
-											<span>Animation</span>
+											<h3><a href="work.html">trello clone 프로젝트(2019.06)</a></h3>
+											<span>
+												패스트 캠퍼스에서 진행한 해커톤에서 백엔드 개발자들과 협업하여 
+												세계적으로 널리 사용되는 웹기반의 프로젝트 관리 소프트웨어인 trello 클론 코딩을 진행하였습니다.
+												드래그 앤 드랍 기능을 구현하기 위하여 Angular material을 사용하였습니다.
+												가능한 자바스크립트를 이용한 접근을 지양하고 프레임워크에서 제안하는 방식으로 접근하기 위해 노력하였습니다.
+												해커톤 1등상인 기술상을 수상하였습니다.
+											</span>
 											<p class="icon">
 												<span><a href="#" role="button" aria-haspopup="dialog" class="trello-detail project-detail-btn" target="_blank" title="구현 기능 상세보기"><i class="icon-eye2"></i></a></span>
 												<span><a href="https://github.com/progyu/CloneTrelloAngularWeb" target="_blank" title="GitHub로 이동"><i class="icon-github"></i></a></span>
@@ -409,7 +415,7 @@
 								<div class="project" style="background-image: url(images/one-browser.png);">
 									<div class="desc">
 										<div class="con">
-											<h3><a href="work.html">One browser 프로젝트</a></h3>
+											<h3><a href="work.html">One browser 프로젝트(2019.03)</a></h3>
 											<span>Illustration</span>
 											<p class="icon">
 												<span><a href="#" role="button" aria-haspopup="dialog" class="one-browser-detail project-detail-btn" target="_blank" title="구현 기능 상세보기"><i class="icon-eye2"></i></a></span>
@@ -792,14 +798,20 @@
 					<img class="work-img" src="images/join.png" alt="회원가입 페이지 이미지" title="원본 이미지 보기">
 					<h3 class="font-IGothic">회원 가입</h3>
 					<p class="font-IGothic">
-						만나서 반갑습니다.안녕하세요 제 이름은 이규하 입니다. 만나서 반갑습니다.안녕하세요 제 이름은 이규하 입니다. 만나서 반갑습니다.
+						기존 메가박스의 회원가입 페이지를 그대로 따라하지 않고 개선이 필요한 부분은 수정하였습니다. 
+						엔드 유저의 입장에서 좋은 웹사이트는 입력을 적게 하는 것이라고 생각합니다.
+						따라서, 기존의 이메일 중복체크 버튼을 없애고 포커스가 이동하면 자동으로 이메일 중복체크를 할 수 있게 변경하였습니다. 
+						또 이메일 입력 시 @까지 입력하면 자동으로 이메일을 추천해주는 기능을 구현하였습니다.
 					</p>
 				</article>
 				<article class="article-left">
 					<img class="work-img" src="images/movie-pick.png" alt="영화 선택 모달 이미지" title="원본 이미지 보기">
 					<h3 class="font-IGothic">영화 선택 모달창</h3>
 					<p class="font-IGothic">
-						Animi deleniti a deserunt illum pariatur, optio, iste blanditiis sequi placeat quidem expedita rem esse itaque magni eaque fugiat sint laudantium! Animi.
+						영화 포스터를 클릭 시 상단에도 선택한 영화명을 볼 수 있도록 구현하였습니다.
+						선택할 수 있는 영화의 수를 최대 4개로 제한하고 4개 이상 선택하려 할 시 알림창을
+						띄워서 엔드 유저에게 관련 정보를 전달하였습니다. 선택한 포스터를 재클릭 시 선택이 해제되게 구현하였습니다.
+						영화 포스터를 예매율순, 가나다순, 개봉일순으로 정렬 할 수 있게 구현하였습니다.
 					</p>
 				</article>
 			</div>
@@ -808,24 +820,154 @@
 					<img class="work-img" src="images/theater-pick.png" alt="극장 선택 모달 이미지" title="원본 이미지 보기">
 					<h3 class="font-IGothic">극장 선택 모달창</h3>
 					<p class="font-IGothic">
-						Animi deleniti a deserunt illum pariatur, optio, iste blanditiis sequi placeat quidem expedita rem esse itaque magni eaque fugiat sint laudantium! Animi.
+						로그인 한 상태에서 이전에 설정한 선호 영화관이 있을 시 선호 영화관이 선택된 상태를 화면에 구현하였습니다.
+						로그인 한 상태에서 이전에 설정한 선호 영화관이 없을 시 선호 영화관을 등록할 수 있고 바로 반영이 되도록 구현하였습니다.
+						각 지역의 지도를 삽입하고 영화관명을 호버 시 지도에 마커가 표시되도록 구현하였습니다.
 					</p>
 				</article>
 				<article>
 					<img class="work-img" src="images/preferTheater.png" alt="선호 영화관 선택 모달 이미지" title="원본 이미지 보기">
 					<h3 class="font-IGothic">선호 영화관 선택 모달창</h3>
 					<p class="font-IGothic">
-						Animi deleniti a deserunt illum pariatur, optio, iste blanditiis sequi placeat quidem expedita rem esse itaque magni eaque fugiat sint laudantium! Animi.
+						지역 선택 시에 해당 지역 영화관만을 보여주도록 구현하였습니다.
+						선호 영화관을 변경하거나 삭제한 후 등록 버튼을 클릭 시 
+						navbar에 위치한 회원 정보 모달, 극장 선택 모달에 즉시 반영이 되도록 구현하였습니다.
 					</p>
 				</article>
 			</div>
+		</div>
 		</section>
+		
 		<button class="megabox-close modal-close-btn"><i class="icon-delete2"></i></button>
 	</div>
 
+	<!-- 트렐로 -->
 	<div class="trello-wrapper project-wrapper" hidden>
-		<h1>trello clone</h1>
+		<h1 class="font-IGothic">trello clone</h1>
+		<section>
+			<h2 class="font-IGothic">사용스택</h2>
+			<p class="font-IGothic">Angular, TypeScript, HTML5, CSS3, Git/Github, Slack</p>
+		</section>
+
+		<section>
+			<h2 class="font-IGothic">팀 구성원</h2>
+			<p class="font-IGothic">패스트캠퍼스 수강생 5명(프론트엔드 3명, 백엔드 2명)</p>
+		</section>
+
+		<section class="detail-work">
+			<h2 class="font-IGothic">상세 업무 및 성과</h2>
+			<div class="work-wrapper">
+				<div class="two-work-wrapper">
+				<!-- <article class="article-left">
+					<img class="work-img" src="images/join.png" alt="회원가입 페이지 이미지" title="원본 이미지 보기">
+					<h3 class="font-IGothic">회원 가입</h3>
+					<p class="font-IGothic">
+						기존 메가박스의 회원가입 페이지를 그대로 따라하지 않고 개선이 필요한 부분은 수정하였습니다. 
+						엔드 유저의 입장에서 좋은 웹사이트는 입력을 적게 하는 것이라고 생각합니다.
+						따라서, 기존의 이메일 중복체크 버튼을 없애고 포커스가 이동하면 자동으로 이메일 중복체크를 할 수 있게 변경하였습니다. 
+						또 이메일 입력 시 @까지 입력하면 자동으로 이메일을 추천해주는 기능을 구현하였습니다.
+					</p>
+				</!-->
+				<article class="article-left">
+					<img class="work-img" src="images/trello-list.png" alt="영화 선택 모달 이미지" title="원본 이미지 보기">
+					<h3 class="font-IGothic">카드</h3>
+					<p class="font-IGothic">
+						Card의 전반적인 기능을 구현하였습니다. 
+						+Add Card 버튼을 클릭하였을 시 카드를 추가 할 수 있는 입력창이 나오고 입력을 하면
+						Card를 생성하는 기능을 구현하였습니다.
+						Card 옆 휴지통 아이콘을 클릭하면 Card를 삭제하는 기능을 구현하였습니다.
+						Card 클릭 시 띄워지는 모달창에서 Card의 title을 변경할 수 있게 구현하였습니다.
+					</p>
+				</article>
+			</div>
+			<div class="two-work-wrapper">
+				<article>
+					<img class="work-img" src="images/trello-bg-color.png" alt="극장 선택 모달 이미지" title="원본 이미지 보기">
+					<h3 class="font-IGothic">배경색상</h3>
+					<p class="font-IGothic">
+						헤더에 배경색을 변경할 수 있는 기능을 구현하였습니다.
+						직접적으로 DOM을 조작하는 ElementRef를 사용하지 않고 Renderer2를 사용하여 배경색을 변경하도록 구현하였습니다.
+						실제로 트렐로에서는 메뉴 안에 있는 기능 중 하나이지만 시간 관계상 밖으로 따로 떼어내어 구현하였습니다.
+					</p>
+				</article>
+				<!-- <article>
+					<img class="work-img" src="images/preferTheater.png" alt="선호 영화관 선택 모달 이미지" title="원본 이미지 보기">
+					<h3 class="font-IGothic">선호 영화관 선택 모달창</h3>
+					<p class="font-IGothic">
+						지역 선택 시에 해당 지역 영화관만을 보여주도록 구현하였습니다.
+						선호 영화관을 변경하거나 삭제한 후 등록 버튼을 클릭 시 
+						navbar에 위치한 회원 정보 모달, 극장 선택 모달에 즉시 반영이 되도록 구현하였습니다.
+					</p>
+				</article> -->
+			</div>
+		</div>
+		</section>
+
 		<button class="trello-close modal-close-btn"><i class="icon-delete2"></i></button>
+	</div>
+
+	<!-- 원 브라우저 -->
+	<div class="one-browser-wrapper project-wrapper" hidden>
+		<h1 class="font-IGothic">one browser</h1>
+		<section>
+			<h2 class="font-IGothic">사용스택</h2>
+			<p class="font-IGothic">HTML5, CSS3, jQuery, Git/Github, Slack</p>
+		</section>
+
+		<section>
+			<h2 class="font-IGothic">팀 구성원</h2>
+			<p class="font-IGothic">패스트캠퍼스 수강생 3명(프론트엔드 3명)</p>
+		</section>
+
+		<section class="detail-work">
+			<h2 class="font-IGothic">상세 업무 및 성과</h2>
+			<div class="work-wrapper">
+				<div class="two-work-wrapper">
+				<article class="article-left">
+					<img class="work-img" src="images/join.png" alt="회원가입 페이지 이미지" title="원본 이미지 보기">
+					<h3 class="font-IGothic">회원 가입</h3>
+					<p class="font-IGothic">
+						기존 메가박스의 회원가입 페이지를 그대로 따라하지 않고 개선이 필요한 부분은 수정하였습니다. 
+						엔드 유저의 입장에서 좋은 웹사이트는 입력을 적게 하는 것이라고 생각합니다.
+						따라서, 기존의 이메일 중복체크 버튼을 없애고 포커스가 이동하면 자동으로 이메일 중복체크를 할 수 있게 변경하였습니다. 
+						또 이메일 입력 시 @까지 입력하면 자동으로 이메일을 추천해주는 기능을 구현하였습니다.
+					</p>
+				</article>
+				<article class="article-left">
+					<img class="work-img" src="images/movie-pick.png" alt="영화 선택 모달 이미지" title="원본 이미지 보기">
+					<h3 class="font-IGothic">영화 선택 모달창</h3>
+					<p class="font-IGothic">
+						영화 포스터를 클릭 시 상단에도 선택한 영화명을 볼 수 있도록 구현하였습니다.
+						선택할 수 있는 영화의 수를 최대 4개로 제한하고 4개 이상 선택하려 할 시 알림창을
+						띄워서 엔드 유저에게 관련 정보를 전달하였습니다. 선택한 포스터를 재클릭 시 선택이 해제되게 구현하였습니다.
+						영화 포스터를 예매율순, 가나다순, 개봉일순으로 정렬 할 수 있게 구현하였습니다.
+					</p>
+				</article>
+			</div>
+			<div class="two-work-wrapper">
+				<article>
+					<img class="work-img" src="images/theater-pick.png" alt="극장 선택 모달 이미지" title="원본 이미지 보기">
+					<h3 class="font-IGothic">극장 선택 모달창</h3>
+					<p class="font-IGothic">
+						로그인 한 상태에서 이전에 설정한 선호 영화관이 있을 시 선호 영화관이 선택된 상태를 화면에 구현하였습니다.
+						로그인 한 상태에서 이전에 설정한 선호 영화관이 없을 시 선호 영화관을 등록할 수 있고 바로 반영이 되도록 구현하였습니다.
+						각 지역의 지도를 삽입하고 영화관명을 호버 시 지도에 마커가 표시되도록 구현하였습니다.
+					</p>
+				</article>
+				<article>
+					<img class="work-img" src="images/preferTheater.png" alt="선호 영화관 선택 모달 이미지" title="원본 이미지 보기">
+					<h3 class="font-IGothic">선호 영화관 선택 모달창</h3>
+					<p class="font-IGothic">
+						지역 선택 시에 해당 지역 영화관만을 보여주도록 구현하였습니다.
+						선호 영화관을 변경하거나 삭제한 후 등록 버튼을 클릭 시 
+						navbar에 위치한 회원 정보 모달, 극장 선택 모달에 즉시 반영이 되도록 구현하였습니다.
+					</p>
+				</article>
+			</div>
+		</div>
+		</section>
+
+		<button class="one-browser-close modal-close-btn"><i class="icon-delete2"></i></button>
 	</div>
 
 	<!-- jQuery -->

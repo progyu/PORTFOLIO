@@ -317,6 +317,8 @@
 	const $closeModalbuttons = elList('.modal-close-btn');
 	const $projectWrappers = elList('.project-wrapper');
 
+	const imgAltArr = ['프로규 블로그 이미지', 'GitHub 커밋 이미지', '페이스북 게시글 이미지'];
+
 	// 프로젝트 모달 열기 및 fade-in 효과
 	const openModal = (div) => {
 		div.classList.remove('fadeOut-effect');
@@ -339,7 +341,7 @@
 	const img = document.getElementsByTagName('img');
 	for (let x = 0; x < img.length; x++) {
 		img.item(x).onclick=function() {
-			if(this.alt === '프로규 블로그 이미지' || 'GitHub 커밋 이미지' || '페이스북 게시글 이미지') return;
+			if(this.alt === imgAltArr[x]) return;
 		window.open(this.src)}; 
   };
 	
