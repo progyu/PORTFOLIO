@@ -313,6 +313,7 @@ figure {
               font-size: 28px; } }
         #colorlib-hero .flexslider .slider-text > .slider-text-inner h2 {
           font-size: 18px;
+          color: #fff;
           line-height: 1.5;
           margin-bottom: 30px;
           font-weight: 300;
@@ -339,6 +340,7 @@ figure {
           padding: 10px 15px !important;
           border: none;
           font-weight: 400; }
+          #colorlib-hero .flexslider .slider-text > .slider-text-inner .text-white { color: #fff };
           #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn.btn-learn {
             color: #000;
             border: 1px solid #000;
