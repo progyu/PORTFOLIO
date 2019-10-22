@@ -45,7 +45,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   color: #000;
-  font-family: "Playfair Display", Georgia, serif;
+  /* font-family: "Playfair Display", Georgia, serif; */
   font-weight: 400;
   margin: 0 0 30px 0; }
 
@@ -87,7 +87,6 @@ figure {
   float: left;
   width: 300px;
   position: fixed;
-  /* overflow-y: scroll; */
   z-index: 1001;
   background: #f2f3f7;
   -webkit-transition: 0.5s;
@@ -841,11 +840,11 @@ body.offcanvas {
     .progress-bar.color-10 span {
       color: #00D8FF; }
   .progress-bar.color-11 {
-    background: #000000; }
+    background: #545455; }
     .progress-bar.color-11:after {
-      background: #000000; }
+      background: #545455; }
     .progress-bar.color-11 span {
-      color: #000000; }
+      color: #545455; }
 
 .colorlib-feature {
   text-align: left;
@@ -915,6 +914,7 @@ body.offcanvas {
     .blog-entry .blog-img img {
       position: relative;
       max-width: 100%;
+      cursor: pointer;
       border: 1px solid #e6e6e6;
       -webkit-transform: scale(1);
       -moz-transform: scale(1);
@@ -993,7 +993,7 @@ body.offcanvas {
       height: 300px; }
       .project .desc .con .icon {
         position: absolute;
-        bottom: 20px;
+        bottom: 5px;
         left: 20px;
         right: 20px; }
         .project .desc .con .icon span {

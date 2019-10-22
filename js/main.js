@@ -323,7 +323,7 @@
 		div.classList.add('fadeIn-effect');
 		div.removeAttribute('hidden');
 		$body.style.overflow = 'hidden';
-	}
+	};
 
 	// 프로젝트 모달 닫기 및 fade-out 효과
 	const closeModal = (div) => {
@@ -333,7 +333,7 @@
 		setTimeout(() => {
 			div.setAttribute('hidden',true);
 		}, 200);
-	}
+	};
 
 	// 이미지 확대 기능
 	const img = document.getElementsByTagName('img');
@@ -341,14 +341,14 @@
 		img.item(x).onclick=function() {
 			if(this.alt === '프로규 블로그 이미지') return;
 		window.open(this.src)}; 
-  }
+  };
 	
 	// 모달 열기
 	$projectDetailbuttons.forEach((button, index) => {
 		button.onclick = (e) => {
 			e.preventDefault();
 			openModal($projectWrappers[index]);
-		}
+		};
 	});
 
 	// 모달 닫기
@@ -356,6 +356,6 @@
 		button.onclick = (e) => {
 			e.preventDefault();
 			closeModal($projectWrappers[index]);
-		}
+		};
 	});
 }());
